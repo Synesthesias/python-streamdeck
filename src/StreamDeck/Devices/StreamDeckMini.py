@@ -54,7 +54,7 @@ class StreamDeckMini(StreamDeck):
             return None
 
         states = states[1:]
-        return [bool(s) for s in states]
+        return [s==0x01 for s in states]
 
     def _reset_key_stream(self):
         """
